@@ -1,9 +1,12 @@
+# This funnction reads a text file and outputs the number of words that appear within it.
 def get_word_count(book):
     from main import get_book_text
     words = get_book_text("./books/frankenstein.txt").split()
     num_words = len(words)
     return num_words 
 
+# This function takes a text file as input and outputs a dictionary that tracks the number 
+# of instances of each character that appears within.
 def get_char_count(text):
     text = text.lower()
     counts = {}
@@ -14,6 +17,8 @@ def get_char_count(text):
             counts[char] = 1
     return counts 
 
+# This function takes a dictionary as input and sorts the dictionary by frequency of appearance
+# of each alphabetic character that appears within.
 def sort_counts(char_dict):
     def sort_on(dict):
         return dict["count"]
