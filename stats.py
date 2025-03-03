@@ -1,7 +1,9 @@
+import sys
 # This funnction reads a text file and outputs the number of words that appear within it.
 def get_word_count(book):
     from main import get_book_text
-    words = get_book_text("./books/frankenstein.txt").split()
+    book_path = sys.argv[1]
+    words = get_book_text(book_path).split()
     num_words = len(words)
     return num_words 
 
